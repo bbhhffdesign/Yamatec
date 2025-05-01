@@ -1,0 +1,52 @@
+$breakpoints: (
+  xxs: 320px,   // iPhone SE, móviles muy pequeños
+  xs: 360px,   // iPhone X, 12 mini
+  sm: 412px,   // móviles grandes
+  md: 480px,   // límite para celulares chicos/tablets chicas
+  lg: 576px,
+  xlg: 640px    // transición a tablet o landscape
+);
+
+$typography: (
+  h1: (
+    size: clamp(1.6rem, -1.123rem + 13.617vw, 2.4rem),
+    weight: 700,
+    line: 1.2
+
+  ),
+  h2: (
+    // size: clamp(1.6rem, 5vw, 2.4rem),
+    size: clamp(1.6rem, -1.123rem + 13.617vw, 2.4rem),
+    weight: 700,
+    line: 1.2
+  ),
+  h3: (
+    // size: clamp(1.4rem, 4.5vw, 2rem),
+    size: clamp(1.4rem, -0.643rem + 10.213vw, 2rem),
+    weight: 600,
+    line: 1.3
+  ),
+  h4: (
+    // size: clamp(1.2rem, 4vw, 1.7rem),
+    size : clamp(1.2rem, -0.502rem + 8.511vw, 1.7rem),
+    weight: 600,
+    line: 1.35
+  ),
+  p: (
+    // size: clamp(1rem, 3.5vw, 1.25rem),
+    size: clamp(1rem, 0.149rem + 4.255vw, 1.25rem),
+    weight: 400,
+    line: 1.6
+  ),
+  small: (
+    size: clamp(0.8rem, 0.119rem + 3.404vw, 1rem),
+    weight: 400,
+    line: 1.5
+  ),
+  button: (
+    size: clamp(1rem, 3vw, 1.2rem),
+    weight: 600,
+    line: 1.3
+  )
+);
+

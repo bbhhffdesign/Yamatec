@@ -1,0 +1,32 @@
+@use "../abstract/mixins" as *;
+
+.us-boxes-container{
+
+    gap: clamp(1rem, -5.667rem + 29.63vw, 2rem);
+
+    // @include dev-sm{
+    //     padding: 0 3rem;
+    // }
+
+    .us-box{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // border: solid 1px black;
+        text-align: center;
+        // height: 300px;
+        
+        .us-box__img{
+            padding: 2% 20%;
+            
+        }
+        .us-box__text{
+            // padding: 20% 20%;
+            // height: 50%;
+            
+        }
+    }
+
+
+}

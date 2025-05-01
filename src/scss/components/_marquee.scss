@@ -1,0 +1,99 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+#marquee{
+    // background-color: red;
+    // border-left: solid 3px blue;
+    position: absolute;
+    left: 0;
+    
+}
+
+.marquee{
+    position: relative;
+    margin-top: 2rem;
+    height: 3rem;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: $clr-rosa;
+    transform: rotate(5deg);
+    transform-origin: top left;
+    margin-bottom: 3rem;
+
+    
+    @include breakpoint(xs){
+        height: 3.5rem;
+        margin-bottom: 3.5rem;
+        width: 260vw;
+    }
+    @include breakpoint(sm){
+        height: 4rem;
+        margin-bottom: 4rem;
+        width: 270vw;
+    }
+
+    .marquee__container:nth-of-type(1){
+        animation: marquee 3s infinite linear paused;
+    } 
+    .marquee__container:nth-of-type(2){
+        animation: marquee 3s infinite linear paused;
+    } 
+
+    .marquee__container{
+        width: 100vw;
+        height: inherit;
+        @include flex(center, center, $gap: 1rem);
+        // @include breakpoint(xs){
+        //     width: 130vw;
+        // };
+        // @include breakpoint(sm){
+        //     width: 135vw;
+        // };
+
+    
+        .marquee__item{
+            width: 20%;
+            height: inherit;
+        }
+        .marquee__item:nth-of-type(1) {
+            margin-left: 1rem;
+            background-image: url(/src/assets/img/logos/logoAmd.webp);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        .marquee__item:nth-of-type(2) {
+            background-image: url(/src/assets/img/logos/logoIntel.webp);
+            background-size: 80%;
+            background-position: 50% 40%;
+            background-repeat: no-repeat;
+          }
+        .marquee__item:nth-of-type(3) {
+            background-image: url(/src/assets/img/logos/logoLogitech.webp);
+            background-size: 100%;
+            background-position: 0 60%;
+            background-repeat: no-repeat;
+          }
+        .marquee__item:nth-of-type(4) {
+            background-image: url(/src/assets/img/logos/logoNvidia.webp);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        .marquee__item:nth-of-type(5) {
+            background-image: url(/src/assets/img/logos/logoRazer.webp);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+    }
+
+}
+
+@keyframes marquee{
+    0%{
+        transform: translateX(0%);
+    }100%{
+        transform: translateX(-100%);
+    }
+}

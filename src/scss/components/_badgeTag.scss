@@ -1,0 +1,55 @@
+@use "../abstract/mixins" as *;
+
+.badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  height: clamp(1.2rem, -0.502rem + 8.511vw, 1.7rem);
+  margin: 1rem 0;
+
+
+  .tick {
+    position: relative;
+    z-index: 2;
+    width: auto;
+    height: 100%;
+
+    img{
+        display: inline;
+        height: inherit;
+        width: auto;
+        transform: translateX(50%);
+    }
+
+  }
+
+  .content-wrapper{
+    height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    // justify-content: center;
+
+    z-index: 1;
+    height: 100%;
+    
+    img{
+        display: inline;
+        height: inherit;
+    }
+}
+
+small {
+    padding-left: clamp(0.8rem, -1.583rem + 11.915vw, 1.5rem);
+    height: 100%;
+    background-color: white;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+  }
+}

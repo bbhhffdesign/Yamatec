@@ -1,0 +1,78 @@
+@use "sass:map";
+@use "./maps" as *;
+@use "./variables" as *;
+
+@mixin breakpoint($breakpoint, $direction: min) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    $value: map.get($breakpoints, $breakpoint);
+
+    @if $direction == min {
+      @media (min-width: $value) {
+        @content;
+      }
+    } @else if $direction == max {
+      @media (max-width: $value) {
+        @content;
+      }
+    }
+  } @else {
+    @if $direction == min {
+      @media (min-width: $breakpoint) {
+        @content;
+      }
+    } @else {
+      @media (max-width: $breakpoint) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin flex($justify, $align, $direction: row, $wrap: no-wrap, $gap: none) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+@mixin apply-typography($element) {
+  $styles: map.get($typography, $element);
+
+  @if $styles {
+    font-size: map.get($styles, size);
+    font-weight: map.get($styles, weight);
+    line-height: map.get($styles, line);
+  } @else {
+    @warn "No se encontraron estilos tipográficos para `#{$element}`.";
+  }
+}
+
+
+// Teléfonos muypequeños
+@mixin dev-xs {
+  @media (min-width: #{$breakpoint-xs}) {
+    @content;
+  }
+}
+// Teléfonos pequeños
+@mixin dev-sm {
+  @media (min-width: #{$breakpoint-sm}) {
+    @content;
+  }
+}
+
+// Teléfonos estándar
+@mixin dev-md {
+  @media (min-width: #{$breakpoint-md}) {
+    @content;
+  }
+}
+
+// Tablets y móviles grandes
+@mixin dev-lg {
+  @media (min-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}

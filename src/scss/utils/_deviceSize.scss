@@ -1,0 +1,20 @@
+@use "../abstract/mixins" as *;
+
+.device-size{
+    position: absolute;
+    top: 10svh;
+    height: .5rem;
+    width: .5rem;
+    border: 1px solid rgb(126, 126, 126);
+
+    
+    @include breakpoint(xxs){
+        background-color: rgb(231, 22, 22);
+    }
+    @include breakpoint(xs){
+        background-color: rgb(23, 190, 232);
+    }
+    @include breakpoint(sm){
+        background-color: rgb(16, 249, 98);
+    }
+}

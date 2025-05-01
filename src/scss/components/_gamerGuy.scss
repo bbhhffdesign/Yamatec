@@ -1,0 +1,17 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+.gamerguy-container{
+    height: 100%;
+    width: 100vw;
+    @include flex(center, center);
+    
+    // background-color: red;
+    
+    svg{
+        width: 90%;
+        height: auto;
+        display: block; margin: 0 auto;
+        transform-origin: center;
+    }
+}
