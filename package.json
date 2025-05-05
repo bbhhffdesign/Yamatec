@@ -1,13 +1,17 @@
 {
 	"private": true,
 	"type": "module",
+	"homepage": "https://bbhhffdesign.design.io/Yamatec",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
+		"gh-pages": "^6.3.0",
 		"gsap": "^3.13.0",
+		"keen-slider": "^6.8.6",
 		"normalize.css": "^8.0.1",
 		"preact": "^10.25.3",
 		"preact-iso": "^2.9.1",

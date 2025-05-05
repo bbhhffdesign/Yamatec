@@ -31,15 +31,13 @@ const Us = ()=>{
         <section className="us" >
 
             <Marquee />
-            <Separator />
-            <Separator />
+            <Separator className={"md"} />
             <BadgeTag text="Nosotros"/>
             <div className="us-text-container">
                 <h3><strong>AUMENTÁ TU PRODUCTIVIDAD Y JUGABILIDAD</strong></h3>
                 <h4><strong>Nuestra marca es nueva, Nosotros no.</strong></h4>
                 <p>+10 años optimizando Estaciones de trabajo y Gaming</p>
             </div>
-            <Separator />
             <div className="us-boxes-container">
                 {
                     boxesData.map(({img, text}, index) =>(
@@ -49,15 +47,9 @@ const Us = ()=>{
                     ))
                 }
             </div>
-                {/* <LogoMarquee /> */}
+           
+           <div className="gradient-transition"></div>
 
-            {/* <Marquee>
-             <img src={marqueeImg1} alt="a" />
-             <img src={marqueeImg2} alt="a" />
-             <img src={marqueeImg3} alt="a" />
-             <img src={marqueeImg4} alt="a" />
-             <img src={marqueeImg5} alt="a" />
-            </Marquee> */}
             
 
         </section>

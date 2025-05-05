@@ -9,6 +9,7 @@
     background-position: right;
     @include flex(space-between, center, column, $gap: .5rem);
     text-align: center;
+    padding-bottom: 50%;
     // overflow: hidden;
 
     .hero__text{

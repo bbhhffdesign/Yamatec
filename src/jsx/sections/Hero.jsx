@@ -3,6 +3,7 @@ import gsap from "gsap";
 import NavBar from "../components/NavBar";
 import BadgeTag from "../components/BadgeTag";
 import GamerGuySgv from "../components/GamerGuySvg";
+import Separator from "../components/Separator";
 
 function Hero() {
   const textRef = useRef(null);
@@ -24,7 +25,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="hero">
+    <section className="hero"> 
       <NavBar />
       <BadgeTag disableObserver={true} text={"Potenciamos tu PC de Trabajo o Gaming"} />
 

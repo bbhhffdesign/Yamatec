@@ -19,6 +19,11 @@ h1,
 h2,
 h3,
 h4 {
+
+  &.txt-white{
+    
+    color: white;
+  }
   font-family: $neueRegular;
 
   strong {
@@ -47,6 +52,11 @@ p {
   @include apply-typography(p);
   font-family: $robotoRegular;
   line-height: 100%;
+
+  &.txt-white{
+    
+    color: white;
+  }
 
   strong {
     font-family: $robotoBold;
@@ -81,13 +91,22 @@ section {
 
 .separator{
   width: 100%;
-  height: 6rem;
+  height: 12.5svh;
   
-  @include dev-xs{
-    height: 8rem;
+  &.sm{
+    height: 25svh;
   }
-  @include dev-sm{
-    height: 10rem;
+  &.md{
+    height: 50svh;
   }
-
+  &.lg{
+    height: 100svh;
+    
+    // @include dev-xs{
+    //   height: 28rem;
+    // }
+    // @include dev-sm{
+    //   height: 10rem;
+    // }
+  }
 }

@@ -2,6 +2,7 @@ import { hydrate, prerender as ssr } from 'preact-iso';
 import DeviceSize from "./jsx/utils/DeviceSize";
 import Hero from "./jsx/sections/Hero";
 import Us from "./jsx/sections/Us";
+import Stock from './jsx/sections/Stock';
 import "./scss/index.scss";
 
 export function App() {
@@ -10,6 +11,7 @@ export function App() {
 		<Hero />
 		<Us />
 		<DeviceSize />
+		<Stock />
 	  </>
 	);
 }
